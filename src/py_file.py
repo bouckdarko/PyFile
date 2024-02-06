@@ -23,8 +23,8 @@ def flatten_list(nested_list):
     return nested_list[:1] + flatten_list(nested_list[1:])
 
 def memo_file_manipulation():
-    '''Print memo for file
-    manipulation
+    '''Affiche un mémo sur la manipulation
+    de fichiers
     '''
     clear_screen()
     print("Path at terminal when executing this file")
@@ -46,16 +46,16 @@ def memo_file_manipulation():
 
 
 def clear_screen():
-    '''Clear the screen.
+    '''Nettoie l'écran\n
+    (du terminal ;) ).
     '''
     os.system(['clear', 'cls'][os.name == 'nt'])
 
 def delete_directory(directory_path):
-    '''Remove files from a specific directory\n
-    Directory Path need to be an absolute path.\n
-    You can use :\n
-    os.path.abspath("insert-file-name-here")\n
-    to get an absolute path.
+    '''Supprime un dossier et son contenu\n
+    Les chemins de dossier doivent être des chemins absolus.\n
+    Pour obtenir un chemin absolu :\n
+    os.path.abspath("nom-du-fichier-ici")\n
     '''
     if os.path.isdir(directory_path):
         shutil.rmtree(directory_path)
